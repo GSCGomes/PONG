@@ -1,0 +1,91 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+entity SYNC is
+	port(
+		CLK: in STD_LOGIC;
+		HSYNC,VSYNC: out STD_LOGIC;
+		R,G,B: out STD_LOGIC_VECTOR(9 downto 0)
+	);
+end SYNC;
+
+ARCHITECTURE MAIN OF SYNC IS
+
+
+	constant H_VisibleArea: INTEGER := 1600;
+	constant H_FrontPorch: INTEGER := 60;
+	constant H_SyncPulse: INTEGER := 119;
+	constant H_BackPorch: INTEGER := 21;
+	  
+	constant V_VisibleArea: INTEGER:= 900;
+	constant V_FrontPorch: INTEGER:= 16;
+	constant V_SyncPulse: INTEGER:= 16;
+	constant V_BackPorch: INTEGER:= 68;
+	
+	
+--	constant H_VisibleArea: INTEGER := 1280;
+--	constant H_FrontPorch: INTEGER := 48;
+--	constant H_SyncPulse: INTEGER := 112;
+--	constant H_BackPorch: INTEGER := 248;
+--	  
+--	constant V_VisibleArea: INTEGER:= 1024;
+--	constant V_FrontPorch: INTEGER:= 1;
+--	constant V_SyncPulse: INTEGER:= 3;
+--	constant V_BackPorch: INTEGER:= 38;
+	
+	constant H_WholeLine: INTEGER:= H_VisibleArea + H_FrontPorch + H_SyncPulse + H_BackPorch;
+                                                             
+   constant V_WholeLine: INTEGER:= V_VisibleArea + V_FrontPorch + V_SyncPulse + V_BackPorch;
+	
+	signal HPOS: INTEGER range 0 to H_WholeLine:=0;
+	signal VPOS: INTEGER range 0 to V_WholeLine:=0;
+	begin
+	process(CLK)
+	begin
+		if(CLK'event AND CLK = '1') then
+
+			if(HPOS = (H_FrontPorch + H_SyncPulse + H_BackPorch + (H_VisibleArea / 2)) OR VPOS = (V_FrontPorch + V_SyncPulse + V_BackPorch + (V_VisibleArea / 2))) then
+				R<=(others=>'1');
+				G<=(others=>'1');
+				B<=(others=>'1');
+			else
+				R<=(others=>'0');
+				G<=(others=>'0');
+				B<=(others=>'0');
+			end if;
+
+			if(HPOS < H_WholeLine) then
+				HPOS<=HPOS+1;
+			else
+				HPOS<=0;
+				if(VPOS < V_WholeLine) then
+					VPOS<=VPOS+1;
+				else
+					VPOS<=0;
+				end if;
+			end if;
+			
+			
+			if((HPOS > 0 AND HPOS < (H_FrontPorch + H_SyncPulse + H_BackPorch)) OR (VPOS > 0 AND VPOS < (V_FrontPorch + V_SyncPulse + V_BackPorch))) then
+			R<=(others=>'0');
+			G<=(others=>'0');
+			B<=(others=>'0');
+			end if;
+			
+			
+			if(HPOS > H_FrontPorch AND HPOS < (H_FrontPorch + H_SyncPulse)) then
+				HSYNC<='0';
+			else
+				HSYNC<='1';
+			end if;
+			
+			if(VPOS > 0 AND VPOS < (V_FrontPorch + V_SyncPulse)) then
+				VSYNC<='0';
+			else
+				VSYNC<='1';
+			end if;
+			
+		end if;
+	end process;
+end MAIN;
