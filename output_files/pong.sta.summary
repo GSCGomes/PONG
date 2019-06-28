@@ -1,0 +1,109 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow Model Setup 'C1|altpll_0|sd1|pll|clk[0]'
+Slack : -12.987
+TNS   : -382.339
+
+Type  : Slow Model Setup 'GAME:C2|\process_4:clk'
+Slack : -6.935
+TNS   : -850.311
+
+Type  : Slow Model Setup 'GAME:C2|clk'
+Slack : -3.255
+TNS   : -9.472
+
+Type  : Slow Model Setup 'CLOCK_50'
+Slack : -2.124
+TNS   : -37.875
+
+Type  : Slow Model Hold 'CLOCK_50'
+Slack : -2.545
+TNS   : -5.074
+
+Type  : Slow Model Hold 'GAME:C2|\process_4:clk'
+Slack : 0.391
+TNS   : 0.000
+
+Type  : Slow Model Hold 'GAME:C2|clk'
+Slack : 0.391
+TNS   : 0.000
+
+Type  : Slow Model Hold 'C1|altpll_0|sd1|pll|clk[0]'
+Slack : 0.535
+TNS   : 0.000
+
+Type  : Slow Model Minimum Pulse Width 'CLOCK_50'
+Slack : -1.380
+TNS   : -32.380
+
+Type  : Slow Model Minimum Pulse Width 'GAME:C2|\process_4:clk'
+Slack : -0.500
+TNS   : -227.000
+
+Type  : Slow Model Minimum Pulse Width 'GAME:C2|clk'
+Slack : -0.500
+TNS   : -4.000
+
+Type  : Slow Model Minimum Pulse Width 'C1|altpll_0|sd1|pll|clk[0]'
+Slack : 3.629
+TNS   : 0.000
+
+Type  : Slow Model Minimum Pulse Width 'CLOCK_in'
+Slack : 18.518
+TNS   : 0.000
+
+Type  : Fast Model Setup 'C1|altpll_0|sd1|pll|clk[0]'
+Slack : -6.333
+TNS   : -186.282
+
+Type  : Fast Model Setup 'GAME:C2|\process_4:clk'
+Slack : -2.611
+TNS   : -274.906
+
+Type  : Fast Model Setup 'GAME:C2|clk'
+Slack : -0.867
+TNS   : -2.417
+
+Type  : Fast Model Setup 'CLOCK_50'
+Slack : -0.457
+TNS   : -3.206
+
+Type  : Fast Model Hold 'CLOCK_50'
+Slack : -1.586
+TNS   : -3.160
+
+Type  : Fast Model Hold 'GAME:C2|\process_4:clk'
+Slack : 0.215
+TNS   : 0.000
+
+Type  : Fast Model Hold 'GAME:C2|clk'
+Slack : 0.215
+TNS   : 0.000
+
+Type  : Fast Model Hold 'C1|altpll_0|sd1|pll|clk[0]'
+Slack : 0.244
+TNS   : 0.000
+
+Type  : Fast Model Minimum Pulse Width 'CLOCK_50'
+Slack : -1.380
+TNS   : -32.380
+
+Type  : Fast Model Minimum Pulse Width 'GAME:C2|\process_4:clk'
+Slack : -0.500
+TNS   : -227.000
+
+Type  : Fast Model Minimum Pulse Width 'GAME:C2|clk'
+Slack : -0.500
+TNS   : -4.000
+
+Type  : Fast Model Minimum Pulse Width 'C1|altpll_0|sd1|pll|clk[0]'
+Slack : 3.629
+TNS   : 0.000
+
+Type  : Fast Model Minimum Pulse Width 'CLOCK_in'
+Slack : 18.518
+TNS   : 0.000
+
+------------------------------------------------------------
