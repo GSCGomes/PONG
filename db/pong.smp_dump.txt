@@ -1,0 +1,7 @@
+
+State Machine - |VGA|GAME:C2|currentS
+Name currentS.s3 currentS.s2 currentS.s1 currentS.s0 
+currentS.s0 0 0 0 0 
+currentS.s1 0 0 1 1 
+currentS.s2 0 1 0 1 
+currentS.s3 1 0 0 1 
