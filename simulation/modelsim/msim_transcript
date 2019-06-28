@@ -1,0 +1,97 @@
+# Reading C:/altera/11.1/modelsim_ase/tcl/vsim/pref.tcl 
+# do pong_run_msim_rtl_vhdl.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Modifying C:\altera\11.1\modelsim_ase\win32aloem/../modelsim.ini
+# 
+# vlib PLL
+# ** Warning: (vlib-34) Library already exists at "PLL".
+# vmap PLL PLL
+# Modifying C:\altera\11.1\modelsim_ase\win32aloem/../modelsim.ini
+# vlog -vlog01compat -work PLL +incdir+D:/Hermes/GKE/pong/PLL/synthesis {D:/Hermes/GKE/pong/PLL/synthesis/PLL.v}
+# Model Technology ModelSim ALTERA vlog 10.0c Compiler 2011.09 Sep 21 2011
+# -- Compiling module PLL
+# 
+# Top level modules:
+# 	PLL
+# vlog -vlog01compat -work PLL +incdir+D:/Hermes/GKE/pong/PLL/synthesis/submodules {D:/Hermes/GKE/pong/PLL/synthesis/submodules/PLL_altpll_0.v}
+# Model Technology ModelSim ALTERA vlog 10.0c Compiler 2011.09 Sep 21 2011
+# -- Compiling module PLL_altpll_0_dffpipe_l2c
+# -- Compiling module PLL_altpll_0_stdsync_sv6
+# -- Compiling module PLL_altpll_0
+# 
+# Top level modules:
+# 	PLL_altpll_0
+# vcom -93 -work work {D:/Hermes/GKE/pong/DRAW.vhd}
+# Model Technology ModelSim ALTERA vcom 10.0c Compiler 2011.09 Sep 21 2011
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling package my
+# -- Compiling package body my
+# -- Loading package my
+# vcom -93 -work work {D:/Hermes/GKE/pong/VGA.vhd}
+# Model Technology ModelSim ALTERA vcom 10.0c Compiler 2011.09 Sep 21 2011
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity VGA
+# -- Compiling architecture MAIN of VGA
+# vcom -93 -work work {D:/Hermes/GKE/pong/GAME.vhd}
+# Model Technology ModelSim ALTERA vcom 10.0c Compiler 2011.09 Sep 21 2011
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity GAME
+# -- Compiling architecture main of GAME
+# vcom -93 -work work {D:/Hermes/GKE/pong/SYNC.vhd}
+# Model Technology ModelSim ALTERA vcom 10.0c Compiler 2011.09 Sep 21 2011
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package my
+# -- Compiling entity SYNC
+# -- Compiling architecture MAIN of SYNC
+# 
+# vcom -93 -work work {D:/Hermes/GKE/pong/tb_VGA.vhd}
+# Model Technology ModelSim ALTERA vcom 10.0c Compiler 2011.09 Sep 21 2011
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity tb_VGA
+# -- Compiling architecture teste of tb_VGA
+# 
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneii -L rtl_work -L work -L PLL -voptargs="+acc"  tb_VGA
+# vsim -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneii -L rtl_work -L work -L PLL -voptargs=\"+acc\" -t 1ps tb_VGA 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.tb_vga(teste)
+# Loading ieee.numeric_std(body)
+# Loading work.vga(main)
+# ALTERA version supports only a single HDL
+# ** Error: (vsim-3039) D:/Hermes/GKE/pong/tb_VGA.vhd(62): Instantiation of 'PLL' failed.
+#         Region: /tb_vga/instancia_VGA
+# Loading work.game(main)
+# ** Error: (vsim-3732) D:/Hermes/GKE/pong/VGA.vhd(63): No default binding for component at 'C2'.
+#  (Port 'clk_out_clk' is not on the entity.)
+#         Region: /tb_vga/instancia_VGA/C2
+# ** Error: (vsim-3732) D:/Hermes/GKE/pong/VGA.vhd(63): No default binding for component at 'C2'.
+#  (Port 'reset_reset' is not on the entity.)
+#         Region: /tb_vga/instancia_VGA/C2
+# ** Error: (vsim-3732) D:/Hermes/GKE/pong/VGA.vhd(63): No default binding for component at 'C2'.
+#  (Port 'clk_in_clk' is not on the entity.)
+#         Region: /tb_vga/instancia_VGA/C2
+# Loading work.my(body)
+# Loading work.sync(main)
+# Error loading design
+# Error: Error loading design 
+#        Pausing macro execution 
+# MACRO ./pong_run_msim_rtl_vhdl.do PAUSED at line 19
