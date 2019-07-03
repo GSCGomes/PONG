@@ -18,7 +18,7 @@ I left some pictures below to give a better view on the project.
 </p>
 
 ## Files
-The software was devoloped using Intel's Quartus II software, this repository contains all the files from the Quartus Project, but the files where the actual code is placed are the ones described below.
+The software was devoloped using Intel's Quartus II software and this repository contains all the files from the Quartus Project, but the files where the actual code is placed are the ones described below.
 
 File                     | Overall function
 ---                      | ---
@@ -29,7 +29,7 @@ File                     | Overall function
 [HEADER.vhd](HEADER.vhd) | This file contains the constants used in almost all of the previous files, such as the size of the players, size of the screen, size of the ball, etc.
 
 ## Improvement
-Even though this project was more then enough to complete the discipline, it still has much room for improvement. I'm leaving below some new functionalities that would enrich this project.
+Even though this project was more than enough to complete the discipline, it still has much room for improvement. I'm leaving below some new functionalities that would enrich this project.
 * One player mode
 * Ball with increasing velocity throughout the game (right now the ball has a contant velocity, only its direction changes with the collisions)
 * Better graphics
