@@ -1,5 +1,5 @@
 # PONG
-The Classic PONG made in VHDL with the Altera DE2 Development Board using its VGA Port. It was developed as the final project of the Laboratory of Digital Systems (Laboratório de Sistemas Digitais) discipline from my Electrical Engeneering course at UFMG.
+The Classic PONG made in VHDL with the Altera DE2 Development Board using its VGA Port. It was developed as the final project of the Laboratory of Digital Systems (Laboratório de Sistemas Digitais) discipline from my Electrical Engineering course at UFMG.
 
 ## Execution
 To execute the project, it is necessary to have the Altera DE2 Board and a monitor with a VGA port (it was developed to suit well a 1600x900px monitor, but it is possible to change to another one by changing some constants in [HEADER.vhd](HEADER.vhd)). The code shall be recompiled and uploaded to the board.
