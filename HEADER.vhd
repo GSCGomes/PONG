@@ -23,7 +23,7 @@ package constants is
 	constant V_BackPorch: integer:= 68;	
 	
 	constant H_WholeLine: integer:= H_VisibleArea + H_FrontPorch + H_SyncPulse + H_BackPorch;
-    constant V_WholeLine: integer:= V_VisibleArea + V_FrontPorch + V_SyncPulse + V_BackPorch;
+    	constant V_WholeLine: integer:= V_VisibleArea + V_FrontPorch + V_SyncPulse + V_BackPorch;
 	constant H_InvisibleArea: integer:= H_WholeLine - H_VisibleArea; 
 	constant V_InvisibleArea: integer:= V_WholeLine - V_VisibleArea;
 	constant H_Middle: integer:= H_InvisibleArea + (H_VisibleArea/2);
